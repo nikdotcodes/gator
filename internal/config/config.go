@@ -13,7 +13,7 @@ type Config struct {
 
 func (c *Config) SetUser(username string) error {
 	// set the username in the struct
-	if c.CurrentUserName != "" {
+	if c.CurrentUserName == username {
 		return nil
 	}
 	c.CurrentUserName = username
